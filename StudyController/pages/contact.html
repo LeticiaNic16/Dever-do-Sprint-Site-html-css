@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyController - Contact Me</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+    <p class="headertext">StudyControler</p>
+    <button id="menubutton" class="menubutton" aria-label="Menu">☰</button>
+    </header>
+    <section id="mainsection">
+    <main id="main">
+
+    <section class="title">
+    <h1>Entre em Contato</h1>
+    </section>
+    <article class="text">
+        <p>Este espaço foi criado para que os visitantes possam compartilhar sugestões, opiniões e comentários relacionados ao conteúdo apresentado no site. A troca de ideias é uma forma importante de aprimorar projetos educacionais e construir recursos cada vez mais úteis para estudantes interessados em melhorar seus métodos de estudo.<p>
+    </article>
+
+    <section class="subtitleh3">
+        <h3>Fale conosco</h3>
+    </section>
+
+    <article class="text">
+        <p>Caso tenha dúvidas sobre as técnicas apresentadas, queira sugerir novos conteúdos ou deseje compartilhar sua experiência com métodos de estudo, utilize o formulário abaixo. Embora esta versão do projeto tenha caráter demonstrativo, o objetivo é representar um possível canal de comunicação entre os usuários e os responsáveis pela plataforma.</p>
+    </article>
+    <section id="form">
+        <div class="campo text">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="campo text">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        </div>
+
+        <div class="campo text" id="mensagem">
+        <label for="mensagem"  class="columnflexbox">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="button text">Enviar</button>
+    </section>
+    </main>
+    <aside id="menu" class="inativo">
+    <a class="menulink" href="../index.html">Início</a>   
+    <a class="menulink" href="about.html">Sobre</a>
+    <a class="menulink" href="contact.html">Entre em Contato</a>
+    </aside>
+    </section>
+    <script>
+    //funcionamento do menu
+    const menubutton = document.getElementById("menubutton");
+    const menu = document.getElementById("menu");
+    const main = document.getElementById("main");
+   menubutton.addEventListener("click", () => {
+   if(menu.classList.contains("inativo")){
+   menu.classList.remove("inativo");
+   menubutton.innerText= "✕";
+   main.classList.add("maininativa");
+    main.style.width = "calc(100vw - 360px)";
+   }
+
+   else{
+   menu.classList.add("inativo");
+   menubutton.innerText = "☰";
+   main.classList.remove("maininativa");
+   main.style.width = "calc(100vw - 60px)";
+   }
+    
+});
+     </script>
+</body>
+</html>

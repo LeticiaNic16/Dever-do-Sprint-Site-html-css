@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StudyController - About</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+    <header>
+    <p class="headertext">StudyControler</p>
+    <button id="menubutton" class="menubutton" aria-label="Menu">☰</button>
+    </header>
+
+    <section id="mainsection" class="rowflexbox">    
+    <main id="main">
+        <section id="título">
+            <h1 class="title">Técnicas de Estudo</h1>
+        <section >
+            <ul id="links">
+            <li><a href="#pomodoro" class="linktext">Ir para Pomodoro</a></li>  
+            <li><a href="#active-recall" class="linktext">Ir para Active Recall</a></li>  
+            <li><a href="#flashcards" class="linktext">Ir para Flashcards</a></li> 
+            <li><a href="#hábitos-importantes" class="linktext">Ir para Hábitos Importantes</a></li> 
+            </ul>
+
+        <article>
+        <p class="text">Existem diversas técnicas de estudo que podem ajudar estudantes a aprender com mais eficiência. Embora cada pessoa tenha suas próprias características e preferências, alguns métodos são reconhecidos por sua eficácia na melhoria da concentração, da memorização e da compreensão dos conteúdos. Nesta página são apresentadas algumas das técnicas mais utilizadas por estudantes em todo o mundo, incluindo métodos voltados para revisão, organização e retenção de informações.</p>
+        </article>
+
+        <section id="pomodoro">
+            <h3 class="subtitleh3">Pomodoro</h3>
+        </section>
+
+        <article>
+        <p class="text">A Técnica Pomodoro é um método de gerenciamento de tempo desenvolvido para aumentar a produtividade e reduzir distrações durante os estudos. O método consiste em dividir o trabalho em períodos de concentração intensa, geralmente de vinte e cinco minutos, seguidos por pequenos intervalos de descanso. Após alguns ciclos completos, realiza-se uma pausa mais longa. Essa estratégia ajuda a evitar o cansaço mental excessivo e permite que o estudante mantenha um nível constante de atenção ao longo do dia. Além disso, a técnica auxilia no combate à procrastinação e melhora a percepção do tempo dedicado às tarefas.</p>
+        </article>
+
+        <section id="active-recall">
+            <h3 class="subtitleh3">Active Recall</h3>
+        </section>
+
+        <article>
+        <p clas="text">O Active Recall, também conhecido como recuperação ativa da informação, é uma técnica baseada na ideia de testar constantemente o próprio conhecimento. Em vez de apenas reler anotações ou destacar trechos importantes, o estudante tenta responder perguntas, resolver exercícios ou explicar o conteúdo sem consultar materiais de apoio. Esse esforço de recuperação fortalece a memória e permite identificar pontos que ainda precisam ser estudados. Diversas pesquisas na área da educação apontam que a recuperação ativa é significativamente mais eficiente do que métodos passivos de revisão.</p>
+        </article>
+
+        <section id="flashcards">
+            <h3 class="subtitleh3">Flashcards</h3>
+        </section>
+
+        <article>
+        <p class="text">Flashcards são cartões que apresentam uma pergunta, conceito ou palavra de um lado e a resposta ou explicação correspondente do outro. Essa ferramenta é amplamente utilizada para memorizar definições, fórmulas, datas, idiomas e diversos outros conteúdos. Quando combinados com sistemas de revisão espaçada, os flashcards tornam-se ainda mais eficientes, pois permitem que o estudante revise com maior frequência aquilo que apresenta mais dificuldade, otimizando o tempo de estudo e melhorando os resultados obtidos ao longo do aprendizado.</p>
+        </article>
+
+        <img src="../assets/imagem2.png" alt="estudo com flashcards" width="25%" height="auto">
+
+        <section id="hábitos-importantes">
+            <h3 class="subtitleh3">Hábitos Importantes</h3>
+        </section>
+
+        <article>
+        <p class="text">Além das técnicas específicas de estudo, alguns hábitos contribuem significativamente para o desempenho acadêmico. A combinação entre disciplina, organização e bem-estar físico permite que o estudante desenvolva uma rotina mais consistente e sustentável. Os hábitos apresentados abaixo representam práticas simples que podem ser incorporadas gradualmente ao dia a dia e trazer benefícios para a aprendizagem.</p>
+        <ul>
+            <li class="text">Organização</li>
+            <li class="text">Planejamento</li>
+            <li class="text">Revisão constante</li>
+            <li class="text">Resolução de exercícios</li>
+            <li class="text">Descanso adequado</li>
+        </ul>
+        </article>
+
+    </main>
+    <aside id="menu" class="inativo">
+    <a class="menulink" href="../index.html">Início</a>   
+    <a class="menulink" href="about.html">Sobre</a>
+    <a class="menulink" href="contact.html">Entre em Contato</a>
+    </aside>
+    </section> 
+     <script>
+        //funcionamento do menu
+    const menubutton = document.getElementById("menubutton");
+    const menu = document.getElementById("menu");
+    const main = document.getElementById("main");
+menubutton.addEventListener("click", () => {
+   if(menu.classList.contains("inativo")){
+   menu.classList.remove("inativo");
+   menubutton.innerText= "✕";
+   main.classList.add("maininativa");
+    main.style.width = "calc(100vw - 360px)";
+   }
+
+   else{
+   menu.classList.add("inativo");
+   menubutton.innerText = "☰";
+   main.classList.remove("maininativa");
+   main.style.width = "calc(100vw - 60px)";
+   }
+    
+});
+     </script>
+    </body>
+</html>
